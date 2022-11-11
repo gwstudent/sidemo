@@ -1,0 +1,21 @@
+
+name: sidemo
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # This workflow contains a single job called "build"
+  process:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      # Runs a single command using the runners shell
+      - run: echo ${{ github.event.head_commit.message }}
+      #  run: echo ${{ github.event.pull_request.title }}
+
+
