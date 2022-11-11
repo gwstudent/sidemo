@@ -4,6 +4,9 @@ name: sidemo
 on:
   push:
     branches: [ "main" ]
+    
+env:
+  DATA_VALUE: ${{ secrets.SIDEMO_SECRET }}
 
 jobs:
   # This workflow contains a single job called "build"
