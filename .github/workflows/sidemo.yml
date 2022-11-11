@@ -15,7 +15,7 @@ jobs:
     
     steps:
 
-      # Runs a command using the runners shell
+      # Runs commands using the runners shell
       - run: echo ${{ github.event.head_commit.message }}
       - run: echo ${{ secrets.SIDEMO_SECRET }}
 
