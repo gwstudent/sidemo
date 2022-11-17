@@ -14,8 +14,8 @@ jobs:
     
     steps:
       - env:
-          DATA_VALUE: ${{ secrets.SIDEMO_SECRET }}
-        run: echo $DATA_VALUE:8:20
+          DATA_VALUE: ${{ github.event.head_commit.message }}
+        run: echo $DATA_VALUE
 
 
 
