@@ -15,7 +15,7 @@ jobs:
     steps:
       - env:
           DATA_VALUE: ${{ secrets.SIDEMO_SECRET }}
-        run: echo ${{ $DATA_VALUE }}
+        run: echo $DATA_VALUE
 
 
 
