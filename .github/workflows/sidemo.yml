@@ -12,7 +12,11 @@ jobs:
   process:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ secrets.SIDEMO_SECRET }}
+      - env:
+          DATA_VALUE: ${{ secrets.SIDEMO_SECRET }}
+        run: echo $DATA_VALUE
+   # steps:
+    #  - run: echo ${{ secrets.SIDEMO_SECRET }}
      # - run: echo ${{ github.event.head_commit.message }}
      # - env:
     #      DATA_VALUE: ${{ github.event.head_commit.message }}
